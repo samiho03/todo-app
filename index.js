@@ -1,12 +1,6 @@
-const express = require("express")
+const app = require("./app")
 
-const PORT = 8000
-
-//init app
-const app = express()
-
-//view engine
-app.set("view engine", "ejs")
+const PORT = process.env.PORT || 8000               //Optional port => if the port is missing then it will recieve this 8000 port
 
 //listen server
 app.listen(PORT, ()=>{
